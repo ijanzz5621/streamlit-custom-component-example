@@ -1,0 +1,2 @@
+recursive-include discrete_slider/frontend/build *
+

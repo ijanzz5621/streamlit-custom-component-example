@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: streamlit-discrete-slider
+Version: 0.0.1
+Summary: Streamlit component that allows us to select options
+Home-page: 
+Author: Sharizan Redzuan
+Author-email: sharizan_81@yahoo.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE

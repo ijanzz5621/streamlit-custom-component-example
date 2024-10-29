@@ -1,0 +1,63 @@
+Tutorials:
+https://www.youtube.com/watch?v=QjccJl_7Jco&t=603s
+
+Stop at:
+2:10
+
+
+How to run:
+===========
+
+1. Set python env and install streamlit
+
+    python3 -m venv venv  # create venv
+    venv/bin/activate   # activate venv
+    pip install streamlit # install streamlit
+
+2. Initialize and run the component template frontend:
+
+    cd template/my_component/frontend
+    npm install    # Install npm dependencies
+    npm run start  # Start the Webpack dev server
+
+3. From a separate terminal, run the template's Streamlit app:
+    
+    .venv/Scripts/activate  # activate the venv you created earlier
+    pip install -e . # install template as editable package
+    streamlit run my_component/example.py  # run the example
+
+
+Compile to ship the component:
+==============================
+
+1.  Go to the frontend folder
+
+2.  run below command
+
+    npm run build
+
+3.  Write a code in the __init__.py to laod from the build folder
+
+    (refer to __init__.py)
+
+
+Create a wheel file (Publish to pypi):
+======================================
+
+1.  Link:
+    https://docs.streamlit.io/develop/concepts/custom-components/publish
+
+2.  Change the "my_component" to component name "discrete_slider" in the MANIFEST.in file
+
+3.  Install wheel package using below command
+
+    pip install wheel
+
+3.  Add below to setup.py
+
+    setup_requires=["wheel"]
+
+3.  Run the below command:
+
+    python setup.py sdist bdist_wheel
+
